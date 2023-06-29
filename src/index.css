@@ -16,14 +16,14 @@ body{
 
 header{
     min-height: auto;
-    background: hsla(223, 96%, 24%, 1);
+    background: hsl(222, 100%, 2%);
 }
 nav{
     width: 100vw;
     height: 10vh;
     display: grid;
     place-items: center;
-    background: hsla(223, 96%, 34%, 0.48);
+    background: hsla(223, 87%, 83%, 0.244);
 }
 nav li{
     padding: 10px;
@@ -49,31 +49,31 @@ nav ul{
     gap: 1rem;
     align-items: center;
 }
-.container{
-    width: 100vw;
-    height: 100vh;
-    background: rgb(250, 254, 255);
-}
+
 nav li:hover .box{
     top:45px;
     z-index: 99;
     opacity: 1;
 }
 nav ul li ul.box{
-    width: 330px;
+    width:410px;
     height: fit-content;
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(140px,1fr));
+    grid-template-columns: repeat(auto-fit,minmax(180px,1fr));
+    place-items: center;
     flex-wrap: wrap;
     transform: translate(-50%,0%);
     border-radius: 10px;
-    background:hsla(195, 100%, 79%, 0.97);
-    box-shadow: 0 0 20px 5px hsla(195, 100%, 79%, 0.97);
+    background:hsla(0, 0%, 100%, 0.97);
     position: absolute;
     top:50px;
+    left: 50%;
     z-index: -1;
     transition: 0.3s all ease-in-out;
     opacity: 0;
+}
+nav ul li:nth-of-type(3) ul.box{
+   width: 200px;
 }
 nav ul li ul.box::after{
     content: '';
@@ -81,7 +81,7 @@ nav ul li ul.box::after{
     position: absolute;
     width: 30px;
     height: 30px;
-    background:hsla(195, 100%, 79%, 0.97);
+    background:hsla(192, 33%, 97%, 0.97);
     top: 0;
     left: 50%;
     transform: rotate(45deg);
@@ -90,8 +90,7 @@ nav ul li ul.box::after{
 nav ul li ul li{
     font-size: 20px;
     font-weight: 500;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    color: hsla(195, 100%, 25%, 0.97);
+    color: hsla(195, 100%, 1%, 0.97);
     height: fit-content;
     padding: 5px;
     cursor: pointer;
@@ -147,4 +146,7 @@ nav ul li ul.box:first-child img{
 
 .grid--info{
     grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+}
+#adidas, #puma , #nike-logo{
+    width : 80px;
 }
